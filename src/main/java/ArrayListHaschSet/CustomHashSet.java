@@ -1,3 +1,5 @@
+package ArrayListHaschSet;
+
 import java.util.Objects;
 
 class CustomHashSet<E> {

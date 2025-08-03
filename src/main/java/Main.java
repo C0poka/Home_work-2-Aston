@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
 
-        // Создание нескольких экземпляров студентов с наборами книг
+        // Создание студентов с наборами книг
         students.add(new Student(
                 "Иван",
                 Arrays.asList(
@@ -31,12 +31,12 @@ public class Main {
                         new Book("Граф Монте-Кристо", 1400, 1844),
                         new Book("Игра престолов", 835, 1996),
                         new Book("Код да Винчи", 454, 2003),
-                        new Book("Американские боги", 636, 2001),
+                        new Book("Пикник на обочине", 256, 1972),
                         new Book("Коллекционер", 288, 1963))
         ));
 
         students.stream()
-                .peek(System.out::println)                      // выводит каждого студента
+                .peek(System.out ::println)                      // выводит каждого студента
                 .flatMap(student -> student.books.stream())    // получает книги всех студентов
                 .sorted(Comparator.comparingInt(book -> book.pagesCount)) // сортирует книги по числу страниц
                 .distinct()                                     // оставляет только уникальные книги

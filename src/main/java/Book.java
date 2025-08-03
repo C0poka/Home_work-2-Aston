@@ -11,11 +11,11 @@ class Book implements Comparable<Book> {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", pagesCount=" + pagesCount +
-                ", yearPublished=" + yearPublished +
-                '}';
+        return
+                "\nBook " +
+                "title= '" + title + '\'' +
+                ", pages Count= " + pagesCount +
+                ", year Published= " + yearPublished ;
     }
 
     @Override
